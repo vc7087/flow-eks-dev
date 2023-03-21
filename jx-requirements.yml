@@ -34,15 +34,15 @@ spec:
   secretStorage: secretsManager
   vault: {}   
   storage:
-    backup:
-      enabled: false
-    logs:
-      enabled: true
-      url: s3://logs-apigw-eks-20230321090204764600000001
-    reports:
-      enabled: true
-      url: s3://reports-apigw-eks-20230321090204773300000005
-    repository:
-      enabled: true
-      url: s3://repository-apigw-eks-20230321090204770600000003
+  - name: backup
+    enabled: false
+  - name: logs
+    enabled: true
+    url: s3://logs-apigw-eks-20230321090204764600000001
+  - name: reports
+    enabled: true
+    url: s3://reports-apigw-eks-20230321090204773300000005
+  - name: repository
+    enabled: true
+    url: s3://repository-apigw-eks-20230321090204770600000003
   webhook: lighthouse
