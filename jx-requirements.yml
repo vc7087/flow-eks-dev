@@ -4,20 +4,26 @@ spec:
   autoUpdate:
     enabled: false
     schedule: ""
+  terraform: true
   cluster:
     devEnvApprovers:
     - todo
-    environmentGitOwner: todo
+    clusterName: "apigw-eks"
+    environmentGitOwner: ""
     gitKind: gitlab
     gitName: gitlab
     gitServer: https://git.hilti.com
     provider: eks
+    region: "eu-west-1"
+    registry: "206564425444.dkr.ecr.eu-west-1.amazonaws.com"
+    project: "206564425444"
   environments:
   - key: dev
   - key: staging
   - key: production
   ingress:
     domain: ""
+    ignoreLoadBalancer: false
     externalDNS: false
     namespaceSubDomain: -jx.
     tls:
@@ -26,5 +32,17 @@ spec:
       production: false
   repository: nexus
   secretStorage: secretsManager
-  vault: {}
+  vault: {}   
+  storage:
+    backup:
+      enabled: false
+    logs:
+      enabled: true
+      url: s3://logs-apigw-eks-20230321090204764600000001
+    reports:
+      enabled: true
+      url: s3://reports-apigw-eks-20230321090204773300000005
+    repository:
+      enabled: true
+      url: s3://repository-apigw-eks-20230321090204770600000003
   webhook: lighthouse
