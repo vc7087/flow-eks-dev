@@ -8,9 +8,9 @@ spec:
     devEnvApprovers:
     - todo
     environmentGitOwner: todo
-    gitKind: github
-    gitName: github
-    gitServer: https://github.com
+    gitKind: gitlab
+    gitName: gitlab
+    gitServer: https://git.hilti.com
     provider: eks
   environments:
   - key: dev
