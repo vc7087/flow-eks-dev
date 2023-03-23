@@ -14,5 +14,6 @@ releases:
   values:
   - ../../versionStream/charts/cdf/tekton-pipeline/values.yaml.gotmpl
   - jx-values.yaml
+  - overrides.yaml
 templates: {}
 renderedvalues: {}
