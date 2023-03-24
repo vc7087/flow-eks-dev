@@ -1,0 +1,18 @@
+apiVersion: gitops.jenkins-x.io/v1alpha1
+kind: SourceConfig
+metadata:
+  creationTimestamp: null
+spec:
+  jenkinsServers:
+  - groups:
+    - owner: vc7087
+      provider: https://github.com
+      providerKind: github
+      repositories:
+      - name: nanyang
+        scheduler: in-repo
+    server: jenkins
+  slack:
+    channel: '#jenkins-x-pipelines'
+    kind: failureOrNextSuccess
+    pipeline: release
