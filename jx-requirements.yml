@@ -10,9 +10,9 @@ spec:
     - todo
     clusterName: "apigw-eks"
     environmentGitOwner: ""
-    gitKind: gitlab
-    gitName: gitlab
-    gitServer: https://git.hilti.com
+    gitKind: github
+    gitName: github
+    gitServer: https://github.com
     provider: eks
     region: "eu-west-1"
     registry: "206564425444.dkr.ecr.eu-west-1.amazonaws.com"
