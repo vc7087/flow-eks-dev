@@ -3,6 +3,13 @@ kind: SourceConfig
 metadata:
   creationTimestamp: null
 spec:
+  groups:
+  - owner: vc7087
+    provider: https://github.com
+    providerKind: github
+    repositories:
+    - name: nodejs
+    scheduler: in-repo
   jenkinsServers:
   - groups:
     - owner: vc7087
